@@ -7,6 +7,7 @@ import { pushDataLayer } from '../lib/analytics';
 import { WishlistContext } from '../context/WishlistContext';
 import { UserContext } from '../context/UserContext';
 import Newsletter from '../components/Newsletter';
+import api from '../api/axios';
 
 const ProductsPage = () => {
     const [products, setProducts] = useState([]);
@@ -17,7 +18,7 @@ const ProductsPage = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const { data } = await axios.get('http://localhost:5001/api/products');
+                const { data } = await api.get('/api/products');
                 const regularProducts = data.filter(product => !product.discountPrice || product.discountPrice === "");
                 setProducts(regularProducts);
                 

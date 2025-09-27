@@ -5,6 +5,7 @@ import { UserContext } from '../context/UserContext';
 import { pushDataLayer } from '../lib/analytics';
 import { mapProductToGA4 } from '../lib/mappers';
 import axios from 'axios';
+import api from '../api/axios';
 import './CheckoutPage.css';
 
 const CheckoutPage = () => {
@@ -157,7 +158,7 @@ const CheckoutPage = () => {
                     Authorization: `Bearer ${userInfo.token}`,
                 },
             };
-            const { data: createOrder } = await axios.post('http://localhost:5001/api/orders', orderData, config);
+            const { data: createOrder } = await api.post('/api/orders', orderData, config);
             navigate('/thank-you', { state: { order: createOrder } });
             clearCart();
 

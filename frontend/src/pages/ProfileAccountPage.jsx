@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 import axios from 'axios';
+import api from '../api/axios';
 import './ProfileAccountPage.css'; // <-- THIS LINE HAS BEEN CORRECTED
 
 const ProfileAccountPage = () => {
@@ -27,7 +28,7 @@ const ProfileAccountPage = () => {
                         },
                     };
                     
-                    const { data } = await axios.get('http://localhost:5001/api/orders/myorders', config);
+                    const { data } = await api.get('/api/orders/myorders', config);
                     setOrders(data);
                 } catch (error) {
                     console.error('Error fetching orders:', error);

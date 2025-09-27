@@ -6,6 +6,7 @@ import { UserContext } from '../context/UserContext';
 import './ProductDetailPage.css';
 import axios from 'axios';
 import { mapProductToGA4 } from '../lib/mappers';
+import api from '../api/axios';
 
 const AccordionItem = ({ title, content }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +44,7 @@ const ProductDetailPage = () => {
             viewItemPushed.current = false;
             try {
                 setLoading(true);
-                const { data } = await axios.get(`http://localhost:5001/api/products/${productId}`);
+                const { data } = await api.get(`/api/products/${productId}`);
                 setProduct(data);
                 if (data.images && data.images.length > 0) {
                     setMainImage(data.images[0]);

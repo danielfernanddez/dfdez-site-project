@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 import SHA256 from 'crypto-js/sha256';
 import { pushDataLayer } from '../lib/analytics';
 import axios from 'axios';
+import api from '../api/axios';
 
 export const UserContext = createContext();
 
@@ -49,7 +50,7 @@ export const UserProvider = ({ children }) => {
     };
 
     const login = async (email, password) => {
-        const { data } = await axios.post('http://localhost:5001/api/users/login', { email, password });
+        const { data } = await api.post('/api/users/login', { email, password });
         localStorage.setItem('userInfo', JSON.stringify(data));
         setUserInfo(data);
         

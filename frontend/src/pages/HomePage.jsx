@@ -8,6 +8,7 @@ import { UserContext } from "../context/UserContext";
 import "./HomePage.css";
 import Newsletter from "../components/Newsletter";
 import VideoSection from "../components/VideoSection";
+import api from "../api/axios";
 
 const HomePage = () => {
     const { toggleWishlistItem, isProductInWishlist } = useContext(WishlistContext);
@@ -20,7 +21,7 @@ const HomePage = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const { data } = await axios.get("http://localhost:5001/api/products");
+                const { data } = await api.get("/api/products");
                 setProducts(data.filter(p => !p.discountPrice || p.discountPrice === ""));
                 setSaleProducts(data.filter(p => p.discountPrice && p.discountPrice !== ""));
                 if (data.length > 0 && !eventPushed.current) {
