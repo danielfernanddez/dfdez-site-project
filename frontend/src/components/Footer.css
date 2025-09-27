@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+    --footer-bg: #111111;
+    --footer-text: #ffffff;
+    --footer-text-muted: #888888;
+    --footer-heading: #888888;
+}
+
+.Footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 5rem 2rem 1.5rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Important for the background logo */
+}
+
+.Footer a {
+    color: var(--footer-text);
+    text-decoration: none;
+}
+
+.Footer-mainContent {
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem 8rem; /* row-gap column-gap */
+    position: relative; /* To appear above the background logo */
+    z-index: 2;
+}
+
+.Footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer-column-p{
+  display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Footer-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 300px;
+}
+
+.Footer-heading {
+    color: var(--footer-heading);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+}
+
+.Footer-link {
+    font-size: 1rem;
+    line-height: 1.8;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+}
+.Footer-link:hover {
+    color: var(--footer-text-muted);
+}
+
+.Footer-address {
+    color: var(--footer-text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.Footer-navList, .Footer-connectList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.Footer-navLink {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+.Footer-navLink:hover {
+    color: var(--footer-text-muted);
+}
+
+.Footer-bottomBar {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid var(--footer-heading);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--footer-text-muted);
+    font-family: monospace;
+    position: relative;
+    z-index: 2;
+}
+
+.Footer-backgroundLogo {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    font-family: 'Fredoka One', cursive;
+    font-size: 18vw; /* Responsive font size based on viewport width */
+    font-weight: 900;
+    text-align: center;
+    color: var(--footer-text);
+    opacity: 0.05;
+    z-index: 1;
+    user-select: none; /* Prevent text selection */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .Footer {
+        padding-top: 4rem;
+    }
+    .Footer-mainContent {
+        margin-bottom: 4rem;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+    .Footer-navLink {
+        font-size: 1.5rem;
+    }
+    .Footer-bottomBar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    .Footer-backgroundLogo{
+      position: absolute;
+      bottom: 50rem;
+      left: 14rem;
+      font-size: 45vw; /* Responsive font size based on viewport width */
+      transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .Footer-mainContent {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+}
+

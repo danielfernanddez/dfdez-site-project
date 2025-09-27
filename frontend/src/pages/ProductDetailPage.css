@@ -1,0 +1,299 @@
+.ProductDetailPage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.ProductDetailPage-breadcrumbs {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.ProductDetailPage-breadcrumbs a {
+    color: #666;
+    text-decoration: none;
+}
+.ProductDetailPage-breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.ProductDetailPage-mainContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* --- Image Gallery Section --- */
+.ProductDetailPage-gallery {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.ProductDetailPage-thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ProductDetailPage-thumbnails img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.ProductDetailPage-thumbnails img.active {
+    border-color: #333;
+}
+
+.ProductDetailPage-mainImage {
+    flex-grow: 1;
+}
+
+.ProductDetailPage-mainImage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* --- Product Details Section --- */
+.ProductDetailPage-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.ProductDetailPage-brand {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.ProductDetailPage-name {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0.5rem 0 1rem;
+    text-align: left;
+}
+
+.ProductDetailPage-price {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Color & Size Selectors */
+.ProductDetailPage-selector {
+    margin-bottom: 2rem;
+}
+.ProductDetailPage-selector p {
+    margin-bottom: 0.8rem;
+}
+.ProductDetailPage-colorSwatches,
+.ProductDetailPage-sizeButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.ProductDetailPage-colorSwatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    outline: 1px solid #ccc;
+    cursor: pointer;
+    transition: outline-color 0.2s;
+}
+.ProductDetailPage-colorSwatch.selected,
+.ProductDetailPage-colorSwatch:hover {
+    outline-color: #333;
+}
+
+.ProductDetailPage-sizeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ProductDetailPage-sizeHeader a {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.ProductDetailPage-sizeButton {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+.ProductDetailPage-sizeButton:hover {
+    border-color: #333;
+}
+.ProductDetailPage-sizeButton.selected {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.ProductDetailPage-actionContainer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.ProductDetailPage-addToBagButton {
+    flex-grow: 1;
+    width: 100%;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.ProductDetailPage-addToBagButton:hover {
+    background-color: #000;
+}
+
+.ProductDetailPage-wishlistButton {
+    flex-shrink: 0;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ProductDetailPage-wishlistButton:hover {
+    background: #e9ecef;
+}
+
+.ProductDetailPage-wishlistButton svg {
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.ProductDetailPage-wishlistButton.active svg {
+    fill: #dc3545;
+    color: #dc3545;
+}
+
+.ProductDetailPage-deliveryInfo {
+    font-size: 0.8rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+/* Accordion */
+.ProductDetailPage-accordion {
+    width: 100%;
+}
+.ProductDetailPage-accordionItem {
+    border-bottom: 1px solid #eee;
+}
+.ProductDetailPage-accordionTitle {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1rem 0;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ProductDetailPage-accordionContent {
+    padding: 0 0 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.ProductDetailPage-priceContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.ProductDetailPage-originalPrice {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+.ProductDetailPage-discountPrice {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+/* Sale label for the main image */
+.ProductDetailPage-mainImage {
+    position: relative; /* Add this */
+}
+
+.ProductDetailPage-saleLabel {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #dc3545;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .ProductDetailPage-mainContent {
+        grid-template-columns: 1fr;
+    }
+    .ProductDetailPage-gallery {
+        flex-direction: column-reverse;
+    }
+    .ProductDetailPage-thumbnails {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .ProductDetailPage-thumbnails img {
+        width: 60px;
+        height: 75px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ProductDetailPage {
+        padding: 1.5rem 0.5rem;
+    }
+    .ProductDetailPage-mainContent {
+        gap: 2rem;
+    }
+    .ProductDetailPage-name {
+        font-size: 1.5rem;
+    }
+    .ProductDetailPage-price {
+        font-size: 1.3rem;
+    }
+}

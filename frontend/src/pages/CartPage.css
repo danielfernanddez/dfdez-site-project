@@ -1,0 +1,196 @@
+.CartPage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    color: #333;
+}
+
+.CartPage-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1.5rem;
+}
+
+/* --- Empty Cart Styles --- */
+.CartPage-empty {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.CartPage-empty p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.CartPage-empty a {
+    background-color: #343a40;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.CartPage-empty a:hover {
+    background-color: #212529;
+}
+
+
+/* --- Main Container with Items and Summary --- */
+.CartPage-container {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align summary to the top */
+}
+
+.CartPage-items {
+    flex: 2 1 600px; /* Takes up 2/3 of the space */
+}
+
+.CartPage-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.CartPage-item:last-child {
+    border-bottom: none;
+}
+
+.CartPage-item img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.CartPage-itemDetails {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.CartPage-itemDetails h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    text-align: left;
+}
+
+.CartPage-itemDetails p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin: 0.2rem 0;
+}
+
+.CartPage-itemActions {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.CartPage-itemActions p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.CartPage-itemActions button {
+    background: none;
+    border: none;
+    color: #dc3545;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0;
+}
+
+/* --- Order Summary Box --- */
+.CartPage-summary {
+    flex: 1 1 300px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 2rem;
+    position: sticky; /* Sticks to the top on scroll */
+    top: 100px; /* 70px header height + 30px margin */
+}
+
+.CartPage-summary h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 0 0 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1rem;
+}
+
+.CartPage-summaryRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.CartPage-summaryRow span:last-child {
+    font-weight: 600;
+}
+
+.CartPage-checkoutButton {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: #343a40;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: background-color 0.2s;
+}
+
+.CartPage-checkoutButton:hover {
+    background-color: #212529;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .CartPage {
+        margin: 0rem auto;
+        padding: auto .5rem;
+    }
+    .CartPage-container {
+        gap: 1rem;
+    }
+    .CartPage-title{
+        margin-bottom: .5rem;
+    }
+    .CartPage-summary {
+        width: 100%;
+        position: static; /* Summary doesn't stick on mobile */
+        padding: 1rem;
+    }
+    .CartPage-item {
+        align-items: center;
+    }
+
+    .CartPage-itemDetails, .CartPage-itemActions {
+        align-items: start;
+    }
+    .CartPage-itemActions {
+        margin-top: 1rem;
+        gap: .5rem;
+    }
+}

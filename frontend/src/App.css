@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This is the key addition */
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Layout */
+main {
+  /* This is a global layout style, so it remains as is */
+  padding-top: 70px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* Links & buttons default */
+a, button {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+

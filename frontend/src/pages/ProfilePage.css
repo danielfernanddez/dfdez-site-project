@@ -1,0 +1,106 @@
+.ProfilePage-splitScreen {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    background-color: #f8f9fa;
+}
+
+.ProfilePage-formContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0rem;
+}
+
+.ProfilePage-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.ProfilePage-form h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    color: #212529;
+}
+
+.ProfilePage-form p {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    color: #6c757d;
+}
+
+.ProfilePage-inputGroup {
+    margin-bottom: .8rem;
+}
+
+.ProfilePage-inputGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #495057;
+}
+
+/* --- THIS IS THE KEY CHANGE --- */
+.ProfilePage-inputGroup input {
+    width: 100%; /* Make the input take up the full width of its parent div */
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.ProfilePage-form button {
+    width: 100%;
+    padding: 1rem;
+    background: #343a40;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.ProfilePage-form button:hover {
+    background: #6b6b6b;
+    transform: translateY(-2px);
+}
+
+.ProfilePage-divider {
+    width: 1px;
+    background-color: #dee2e6;
+}
+
+.ProfilePage-formRow {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: .6rem;
+}
+
+.ProfilePage-formRow .ProfilePage-inputGroup {
+    flex: 1; /* Make the container div take up equal space */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .ProfilePage-splitScreen {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .ProfilePage-divider {
+        width: 80%;
+        height: 1px;
+        margin: 0 auto;
+    }
+    .ProfilePage-formContainer {
+        padding: 2rem 1.5rem;
+    }
+}
+

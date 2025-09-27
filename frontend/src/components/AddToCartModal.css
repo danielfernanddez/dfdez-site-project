@@ -1,0 +1,109 @@
+.AddToCartModal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+.AddToCartModal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transform: scale(0.9);
+    animation: scaleUp 0.3s forwards;
+}
+.AddToCartModal-div {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+.AddToCartModal-icon {
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    background-color: #28a745;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddToCartModal-title {
+    font-size: 1.8rem;
+    width: 80%;
+    text-align: end;
+}
+
+.AddToCartModal-product {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.AddToCartModal-product img {
+    width: 60px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.AddToCartModal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.AddToCartModal-button {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.AddToCartModal-button.primary {
+    background-color: #343a40;
+    color: #fff;
+}
+.AddToCartModal-button.primary:hover {
+    background-color: #212529;
+}
+
+.AddToCartModal-button.secondary {
+    background-color: #fff;
+    color: #343a40;
+    border: 1px solid #343a40;
+}
+.AddToCartModal-button.secondary:hover {
+    background-color: #f8f9fa;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    to { transform: scale(1); }
+}

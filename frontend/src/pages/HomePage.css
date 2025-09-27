@@ -1,0 +1,278 @@
+.HomePage-productSection,
+.HomePage-banners{
+  padding: 3rem 2rem;
+}
+.HomePage > section {
+  width: 100%;
+
+}
+
+.HomePage {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #111;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HomePage-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: repeating-linear-gradient(
+    45deg,
+    #f8f8f8 10px,
+    #f3f3f3 180px,
+    #f0f0f0 100px
+  );
+}
+
+.HomePage-heroText {
+  flex: 1;
+  min-width: 250px;
+  max-width: 550px;
+}
+
+.HomePage-heroText h1 {
+  font-style: italic;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.HomePage-heroText p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.HomePage-heroText button {
+  padding: 1.2rem 1.8rem;
+  background: #ffae5e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+  margin-top: 1rem;
+  font-size: 15px;
+}
+
+.HomePage-heroText button:hover {
+  background: #ff9114;
+}
+
+.HomePage-heroImage {
+  flex: 1;
+  text-align: center;
+  min-width: 250px;
+}
+
+.HomePage-heroImage img {
+  width: 100%;
+  max-width: 100.5rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.HomePage-productSection {
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 1250px;
+}
+
+.HomePage-productSection h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.HomePage-productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.HomePage-productCard {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 280px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.5s, box-shadow 0.5s;
+  position: relative;
+}
+
+.HomePage-productCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.HomePage-productCard img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.HomePage-productCard h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.HomePage-productCard p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.HomePage-originalPrice {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 0.5rem;
+}
+
+.HomePage-discountPrice {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.HomePage-banners {
+  display: grid;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  max-width: 1350px;
+}
+
+.HomePage-banner {
+  display: block;
+  width: 100%;
+}
+
+.HomePage-banner img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.HomePage-singleBanner {
+  display: block;
+  width: 100%;
+  max-width: 1350px;
+  padding: 2rem 2rem;
+}
+
+.HomePage-productCard-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.HomePage-imageContainer {
+  position: relative;
+}
+
+.HomePage-wishlistButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.HomePage-wishlistButton:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+.HomePage-wishlistButton svg {
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.HomePage-wishlistButton.active svg {
+  fill: #dc3545;
+  color: #dc3545;
+}
+
+
+
+letter button {
+  padding: 0.8rem 1.2rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+/* --- Responsive adjustments --- */
+@media (min-width: 1340px) {
+  .HomePage-heroImage {
+    flex: 1;
+    text-align: center;
+    max-width: 850px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Add consistent horizontal padding to all sections on mobile */
+  .HomePage-hero,
+  .HomePage-productSection,
+  .HomePage-banners {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .HomePage-singleBanner {
+    padding: 1rem;
+  }
+  .HomePage-hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .HomePage-heroText h1 {
+    font-size: 2rem;
+  }
+  .HomePage-heroText p {
+    font-size: 1rem;
+  }
+  .HomePage-productSection h2 {
+    font-size: 1.5rem;
+  }
+  .HomePage-productCard {
+    max-width: 100%; /* Allow cards to fill column space */
+  }
+  .HomePage-heroText button {
+  padding: 1rem 1.4rem;
+  margin-top: 0rem;
+  font-size: 15px;
+}
+}
+
+@media (max-width: 480px) {
+  .HomePage-heroText h1 {
+    font-size: 1.6rem;
+  }
+  .HomePage-heroText p {
+    font-size: 0.95rem;
+  }
+}
+

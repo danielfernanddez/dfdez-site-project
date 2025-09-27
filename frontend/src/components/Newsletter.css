@@ -1,0 +1,274 @@
+:root {
+    --newsletter-bg: #f5f3ef;
+    --newsletter-text-main: #333;
+    --newsletter-text-secondary: #777;
+    --newsletter-button-bg: #e1c1a1;
+    --newsletter-button-text: #333;
+    --newsletter-border: #e0dcd5;
+}
+
+.Newsletter {
+    width: 100%;
+    /* No horizontal padding here, let the container handle it */
+    padding-top: 2rem; 
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.Newsletter-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--newsletter-bg);
+    border-radius: 20px;
+    max-width: 1200px; /* Increased max-width for a larger feel */
+    width: calc(100% - 4rem); /* Occupy full width minus page margins (2rem left + 2rem right) */
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.Newsletter-imageContainer {
+    flex: 1 1 45%; /* Slightly more space for the image */
+    min-width: 350px; /* Minimum width before wrapping */
+    background-color: #e9e5de; /* Fallback color */
+    display: flex; /* Use flex to center the image if it's smaller than container */
+    justify-content: center;
+    align-items: center;
+}
+
+.Newsletter-imageContainer img {
+    width: 100%; /* Ensure image fills its container */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+
+.Newsletter-content {
+    flex: 1 1 55%; /* More space for content */
+    padding: 4rem; /* Increased padding for a larger design */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Newsletter-content h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3.2rem; /* Larger font size */
+    font-weight: 50;
+    color: var(--newsletter-text-main);
+    line-height: 1.2;
+    margin-bottom: 1.5rem; /* Increased margin */
+    text-align: left; /* Ensure text aligns left */
+}
+
+.Newsletter-content h2 {
+    font-family: 'Oswald' sans-serif; 
+    font-size: 2rem; /* Larger font size */
+    color: var(--newsletter-text-main);
+    line-height: 1.1;
+    margin-bottom: 1.5rem; /* Increased margin */
+    text-align: left; /* Ensure text aligns left */
+}
+
+.Newsletter-content p {
+    font-size: 1.1rem; /* Slightly larger paragraph font */
+    color: var(--newsletter-text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2.5rem; /* Increased margin */
+    max-width: 500px; /* Keep paragraph readable */
+}
+
+.Newsletter-form {
+    display: flex;
+    gap: 0.75rem; /* Increased gap */
+    margin-bottom: 2rem; /* Increased margin */
+}
+
+.Newsletter-form input {
+    flex-grow: 1;
+    padding: 1rem 1.25rem; /* Larger padding */
+    border: 1px solid var(--newsletter-border);
+    border-radius: 10px; /* Slightly larger border-radius */
+    font-size: 1.05rem; /* Slightly larger font */
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+    min-width: 180px; /* Ensure input doesn't get too small */
+}
+
+.Newsletter-form input:focus {
+    border-color: var(--newsletter-button-bg);
+}
+
+.Newsletter-form button {
+    background-color:#ffae5e;
+    color: #fff;
+    border: none;
+    padding: 1rem 1.8rem; /* Larger padding */
+    border-radius: 10px; /* Slightly larger border-radius */
+    font-size: 1.05rem; /* Slightly larger font */
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Increased gap */
+    transition: background-color 0.4s;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.Newsletter-form button:hover {
+    background-color: #ff9114;
+}
+
+.Newsletter-form button svg {
+    width: 20px; /* Slightly larger SVG icon */
+    height: 20px;
+}
+
+.Newsletter-reassuranceList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Newsletter-reassuranceList li {
+    font-size: 0.9rem; /* Slightly larger list item font */
+    color: var(--newsletter-text-secondary);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 20px; /* Increased padding for bullet */
+}
+
+.Newsletter-reassuranceList li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--newsletter-button-bg);
+    font-weight: bold;
+    font-size: 1.2em; /* Make bullet slightly larger */
+    line-height: 1; /* Align bullet vertically */
+}
+
+.Newsletter-linkedin{
+    color: #eb8109;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) { /* Adjust for larger tablets/smaller desktops */
+    .Newsletter-container {
+        width: calc(100% - 2rem); /* Less side margin on slightly smaller screens */
+        gap: 0rem;
+    }
+    .Newsletter-content {
+        padding: 2rem;
+    }
+    .Newsletter-content h1 {
+        font-size: 2.8rem;
+    }
+    .Newsletter-content p {
+        font-size: 1rem;
+    }
+    .Newsletter-form {
+        flex-wrap: wrap; /* Allow form elements to wrap */
+    }
+    .Newsletter-form button {
+        flex-grow: 1; /* Make button expand if input wraps */
+        justify-content: center; /* Center button text when it expands */
+    }
+}
+
+
+@media (max-width: 768px) { /* Adjust for most tablets */
+    .Newsletter-container {
+        flex-direction: column; /* Stack columns vertically */
+        width: calc(100% - 2rem);
+    }
+    .Newsletter-imageContainer {
+        min-width: unset; /* Remove min-width on stacked layout */
+        height: 350px; /* Fixed height for image section on mobile */
+    }
+    .Newsletter-imageContainer img {
+        max-height: 100%; /* Constrain image height */
+    }
+    .Newsletter-content {
+        padding: 2.5rem 2rem; /* Adjust padding for mobile */
+        text-align: center; /* Center content on mobile */
+        align-items: center; /* Center items in flex column */
+    }
+    .Newsletter-content h1,
+    .Newsletter-content h2,
+    .Newsletter-content p {
+        text-align: center; /* Center text on mobile */
+        max-width: 100%; /* Allow paragraph to use full width */
+    }
+    .Newsletter-content h1 {
+        font-size: 2.2rem;
+        margin-bottom: rem;
+    }
+    .Newsletter-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .Newsletter-content p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    .Newsletter-form {
+        flex-direction: column; /* Stack input and button */
+        width: 100%; /* Ensure form takes full width */
+        max-width: 400px; /* Constrain form width */
+    }
+    .Newsletter-form input,
+    .Newsletter-form button {
+        width: 100%;
+    }
+    .Newsletter-reassuranceList {
+        text-align: left; /* Keep list items left-aligned */
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) { /* Adjust for smaller mobile phones */
+    .Newsletter-content {
+        padding: 0rem .6rem;
+    }
+    .Newsletter-content h1 {
+        font-size: 2.2rem;
+    }
+    .Newsletter-content h2 {
+        font-size: 1.2rem;
+    }
+    .Newsletter-content p {
+        font-size: 0.9rem;
+    }
+    .Newsletter-form {
+        gap: 0.75rem;
+    }
+    .Newsletter-reassuranceList li {
+        font-size: 1rem;
+    }
+    .Newsletter-imageContainer {
+    flex: 1 1 25%; /* Slightly more space for the image */
+}
+}
+
+@media (max-width: 390px) { /* Adjust for smaller mobile phones */
+    .Newsletter-content {
+        padding: 0rem .5rem;
+    }
+    .Newsletter-content h1 {
+        font-size: 1.9rem;
+        margin-top: 1rem;
+    }
+    .Newsletter-content h2 {
+        font-size: 1.2rem;
+    }
+    .Newsletter-content p {
+        font-size: 0.9rem;
+    }
+    .Newsletter-reassuranceList li {
+        font-size: .8rem;
+    }
+}
+

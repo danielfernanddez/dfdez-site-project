@@ -1,0 +1,164 @@
+.ProfileAccountPage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+/* --- Profile Details Section (Left Column) --- */
+.ProfileAccountPage-details {
+    flex: 1 1 300px; /* Grow, shrink, with a base width of 300px */
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    position: sticky; /* Make it stick on scroll for desktop */
+    top: 100px; /* 70px header height + 30px margin */
+}
+
+.ProfileAccountPage-details h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+
+.ProfileAccountPage-details p {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: #495057;
+}
+
+.ProfileAccountPage-logoutButton {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1.5rem;
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.ProfileAccountPage-logoutButton:hover {
+    background-color: #c82333;
+}
+
+/* --- Order History Section (Right Column) --- */
+.ProfileAccountPage-orderHistory {
+    flex: 2 1 600px; /* Takes up roughly 2/3 of the space */
+}
+
+.ProfileAccountPage-orderHistory h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.ProfileAccountPage-noOrders {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #f8f9fa; /* A light, soft background */
+    border: 1px dashed #dee2e6; /* A subtle dashed border */
+    border-radius: 8px;
+}
+
+.ProfileAccountPage-noOrders p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 0 0 1.5rem;
+}
+
+.ProfileAccountPage-noOrders-link {
+    display: inline-block;
+    background-color: #343a40;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.ProfileAccountPage-noOrders-link:hover {
+    background-color: #212529;
+    transform: translateY(-2px);
+}
+
+
+.ProfileAccountPage-orderCard {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.ProfileAccountPage-orderCard:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.ProfileAccountPage-orderHeader {
+    background: #f8f9fa;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.ProfileAccountPage-orderItems {
+    padding: 1rem 1.5rem;
+}
+
+.ProfileAccountPage-orderItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.ProfileAccountPage-orderItem:last-child {
+    border-bottom: none;
+    padding-bottom: 0.5rem;
+}
+
+.ProfileAccountPage-orderItem img {
+    width: 60px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.ProfileAccountPage-orderItem p {
+    margin: 0;
+    font-weight: 500;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .ProfileAccountPage {
+        flex-direction: column;
+    }
+
+    .ProfileAccountPage-details {
+        width: 100%;
+        position: static; /* Profile details box won't stick on mobile */
+    }
+}
