@@ -131,7 +131,8 @@
 .Header-dfdez-mobile-bot {
   position: absolute;
   width: 75%;
-  bottom: -10rem ;
+  bottom: -12.5rem ;
+  right: -7rem;
   
 }
 
@@ -157,11 +158,11 @@
     rotate: 42deg;
   }
 
-  .Header-dfdez-mobile-bot {
+  /*.Header-dfdez-mobile-bot {
     position: absolute;
     width: 70%;
     bottom: -11rem ;
-  }
+  }*/
 }
 
 
