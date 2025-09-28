@@ -35,14 +35,14 @@
 .CheckoutPage-authContainer,
 .CheckoutPage-form { /* Apply card styling to all forms */
     background: #fff;
-    padding: 2.5rem;
+    padding: 1.2rem;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 .CheckoutPage-tabs {
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border-bottom: 1px solid #eee;
 }
 
@@ -75,7 +75,7 @@
 .CheckoutPage-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Increased gap for better spacing */
+    gap: 1rem; /* Increased gap for better spacing */
 }
 
 .CheckoutPage-form h2 {

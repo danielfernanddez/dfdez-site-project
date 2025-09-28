@@ -115,12 +115,13 @@ const ProductDetailPage = () => {
                                 alt={`${product.name} - view ${index + 1}`}
                                 className={mainImage === img ? 'active' : ''}
                                 onMouseOver={() => setMainImage(img)}
+                                loading='lazy'
                             />
                         ))}
                     </div>
                     <div className="ProductDetailPage-mainImage">
                         {isSale && <div className="ProductDetailPage-saleLabel">SALE</div>}
-                        <img src={mainImage} alt={product.name} />
+                        <img src={mainImage} alt={product.name} loading='lazy'/>
                     </div>
                 </div>
                 <div className="ProductDetailPage-details">

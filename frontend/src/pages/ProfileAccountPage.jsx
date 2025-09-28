@@ -84,7 +84,7 @@ const ProfileAccountPage = () => {
                             <div className="ProfileAccountPage-orderItems">
                                 {order.orderItems.map(item => (
                                     <div key={item._id || item.sku} className="ProfileAccountPage-orderItem">
-                                        <img src={item.image} alt={item.name} />
+                                        <img src={item.image} alt={item.name} loading='lazy'/>
                                         <p>{item.name} (x{item.quantity})</p>
                                     </div>
                                 ))}

@@ -70,7 +70,7 @@ const ThankYouPage = () => {
                     <h2>Order Summary</h2>
                     {order.orderItems.map(item => (
                         <div key={item._id || item.sku} className="ThankYouPage-item">
-                            <img src={item.image} alt={item.name} />
+                            <img src={item.image} alt={item.name} loading='lazy'/>
                             <div className="ThankYouPage-itemDetails">
                                 <h3>{item.name}</h3>
                                 <p>Qty: {item.quantity}</p>

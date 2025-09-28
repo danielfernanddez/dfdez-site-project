@@ -34,7 +34,7 @@ const Newsletter = ({ formLocation = 'homepage_promo' }) => {
             <div className="Newsletter-container">
                 {/* Image Column */}
                 <div className="Newsletter-imageContainer">
-                    <img src="/images/heros/banner-newsletter-img.webp" alt="Person relaxing and reading a book" />
+                    <img src="/images/heros/banner-newsletter-img.webp" alt="Person relaxing and reading a book" loading='lazy' />
                 </div>
 
                 {/* Content Column */}

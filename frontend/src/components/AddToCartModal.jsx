@@ -23,7 +23,7 @@ const AddToCartModal = () => {
                     <h2 className="AddToCartModal-title">You've added the product to the cart</h2>
                 </div>
                 <div className="AddToCartModal-product">
-                    <img src={addedProduct.images[0]} alt={addedProduct.name} />
+                    <img src={addedProduct.images[0]} alt={addedProduct.name} loading='lazy'/>
                     <span>{addedProduct.name}</span>
                 </div>
                 <div className="AddToCartModal-actions">

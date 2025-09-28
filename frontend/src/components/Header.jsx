@@ -63,7 +63,7 @@ const Header = () => {
       </nav>
 
       <div className={`Header-mobileMenu ${isMenuOpen ? "open" : ""}`}>
-        <img className="Header-dfdez-mobile" src="/images/heros/dfdez-mobile-preview.png" alt="dfdez-mobile" />
+        <img className="Header-dfdez-mobile" src="/images/heros/dfdez-mobile-preview.png" alt="dfdez-mobile" loading='lazy'/>
         <Link to="/" className="Header-navLink" onClick={toggleMenu}>Home</Link>
         <Link to="/products" className="Header-navLink" onClick={toggleMenu}>Products</Link>
         <Link to="/sales" className="Header-navLink" onClick={toggleMenu}>Sales</Link>

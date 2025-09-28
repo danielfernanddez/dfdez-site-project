@@ -77,7 +77,7 @@ const ProductsPage = () => {
     return (
         <div className="ProductsPage">
             <div className="ProductsPage-heroBanner">
-                <img src="/images/heros/products-hero-banner.webp" alt="Our Latest Collection" className="ProductsPage-heroImage" />
+                <img src="/images/heros/products-hero-banner.webp" alt="Our Latest Collection" className="ProductsPage-heroImage" loading='lazy' />
                 <div className="ProductsPage-heroOverlay">
                     <h1>Explore Our Collection</h1>
                     <p>Find your next favorite item.</p>
@@ -95,7 +95,7 @@ const ProductsPage = () => {
                             onClick={() => handleItemSelect(product, index)}
                         >
                             <div className="ProductsPage-imageContainer">
-                                <img src={product.images[0]} alt={product.name} />
+                                <img src={product.images[0]} alt={product.name} loading='lazy' />
                                 
                                 <button 
                                     className={`ProductsPage-wishlistButton ${isProductInWishlist(product._id) ? 'active' : ''}`}

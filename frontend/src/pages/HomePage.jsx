@@ -73,11 +73,11 @@ const HomePage = () => {
         toggleWishlistItem(product);
     };
 
-    const holyPromoBanner = { id: 'promo_holy_sale', isPromo: true, name: 'Holy Sale Event', creative: 'holy-sale-banner', slot: 'homepage_banner_1', imageSrc: '/images/heros/banner-promo-holy.png', alt: 'Banner Promo Holy'};
+    const holyPromoBanner = { id: 'promo_holy_sale', isPromo: true, name: 'Holy Sale Event', creative: 'holy-sale-banner', slot: 'homepage_banner_1', imageSrc: '/images/heros/banner-promo-holy.webp', alt: 'Banner Promo Holy'};
 
     const otherBanners = [
         { id: 'promo_clothes_collection', isPromo: false, imageSrc: '/images/heros/homepage-banner-400-200-clothes.webp', alt: 'Banner Clothes' },
-        { id: 'promo_50_off', isPromo: true, name: '50% Off Select Items', creative: '50-off-banner', slot: 'homepage_banner_3', imageSrc: '/images/heros/banner-promo-50.png', alt: 'Banner Promo 50' },
+        { id: 'promo_50_off', isPromo: true, name: '50% Off Select Items', creative: '50-off-banner', slot: 'homepage_banner_3', imageSrc: '/images/heros/banner-promo-50.webp', alt: 'Banner Promo 50' },
         { id: 'promo_gym_gear', isPromo: false, imageSrc: '/images/heros/homepage-banner-400-200-gym.webp', alt: 'Banner Gym' }
     ];
 
@@ -146,7 +146,7 @@ const HomePage = () => {
                     <button>I'm an Analytics Nerd</button>
                 </div>
                 <div className="HomePage-heroImage">
-                    <img src="/images/heros/banner-hero-tools2.webp" alt="Hero Banner Tools" />
+                    <img src="/images/heros/banner-hero-tools2.webp" alt="Hero Banner Tools" loading='lazy'/>
                 </div>
             </section>
 
@@ -162,7 +162,7 @@ const HomePage = () => {
                         >
                             <div className="HomePage-productCard">
                                 <div className="HomePage-imageContainer">
-                                    <img src={p.images[0]} alt={p.name} />
+                                    <img src={p.images[0]} alt={p.name} loading='lazy'/>
                                     <button
                                         className={`HomePage-wishlistButton ${isProductInWishlist(p._id) ? 'active' : ''}`}
                                         onClick={(e) => handleWishlistClick(e, p)}
@@ -187,7 +187,7 @@ const HomePage = () => {
                     data-promotion-id={holyPromoBanner.id}
                     data-is-promo={holyPromoBanner.isPromo}
                 >
-                    <img src={holyPromoBanner.imageSrc} alt={holyPromoBanner.alt} />
+                    <img src={holyPromoBanner.imageSrc} alt={holyPromoBanner.alt} loading='lazy' />
                 </Link>
             </section>
 
@@ -210,7 +210,7 @@ const HomePage = () => {
                         >
                             <div className="HomePage-productCard">
                                 <div className="HomePage-imageContainer">
-                                    <img src={p.images[0]} alt={p.name} />
+                                    <img src={p.images[0]} alt={p.name} loading='lazy'/>
                                     <button
                                         className={`HomePage-wishlistButton ${isProductInWishlist(p._id) ? 'active' : ''}`}
                                         onClick={(e) => handleWishlistClick(e, p)}
@@ -241,7 +241,7 @@ const HomePage = () => {
                             data-promotion-id={banner.id}
                             data-is-promo={banner.isPromo}
                         >
-                            <img src={banner.imageSrc} alt={banner.alt} />
+                            <img src={banner.imageSrc} alt={banner.alt} loading='lazy' />
                         </Link>
                     ) : (
                         <div
@@ -250,7 +250,7 @@ const HomePage = () => {
                             data-promotion-id={banner.id}
                             data-is-promo={banner.isPromo}
                         >
-                            <img src={banner.imageSrc} alt={banner.alt} />
+                            <img src={banner.imageSrc} alt={banner.alt} loading='lazy'/>
                         </div>
                     )
                 ))}

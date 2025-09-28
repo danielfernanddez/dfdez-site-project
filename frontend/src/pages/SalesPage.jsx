@@ -92,7 +92,7 @@ const SalesPage = () => {
                             }}
                         >
                             <div className="SalesPage-imageContainer">
-                                <img src={product.images[0]} alt={product.name} />
+                                <img src={product.images[0]} alt={product.name} loading='lazy'/>
                                 <div className="SalesPage-saleLabel">SALE</div>
                                 <button
                                     className={`SalesPage-wishlistButton ${isProductInWishlist(product._id) ? 'active' : ''}`}

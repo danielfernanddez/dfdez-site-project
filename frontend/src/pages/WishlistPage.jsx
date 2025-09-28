@@ -19,7 +19,7 @@ const WishlistPage = () => {
                     {wishlistItems.map(item => (
                         <div key={item._id} className="WishlistPage-itemCard">
                             <Link to={`/product/${item._id}`}>
-                                <img src={item.images[0]} alt={item.name} />
+                                <img src={item.images[0]} alt={item.name} loading='lazy'/>
                             </Link>
                             <div className="WishlistPage-itemInfo">
                                 <h3>{item.name}</h3>

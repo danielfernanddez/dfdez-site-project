@@ -65,7 +65,7 @@ const CartPage = () => {
                     <div className="CartPage-items">
                         {cartItems.map(item => (
                             <div key={item.variantId} className="CartPage-item">
-                                <img src={item.images[0]} alt={item.name} />
+                                <img src={item.images[0]} alt={item.name} loading='lazy' />
                                 <div className="CartPage-itemDetails">
                                     <h3>{item.name}</h3>
                                     <p>Size: {item.selectedSize}</p>
