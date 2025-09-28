@@ -131,6 +131,7 @@
     background-color: #fff;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    color: #000;
 }
 .ProductDetailPage-sizeButton:hover {
     border-color: #333;
@@ -219,6 +220,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #000;
 }
 .ProductDetailPage-accordionContent {
     padding: 0 0 1rem;
@@ -285,7 +287,7 @@
 
 @media (max-width: 768px) {
     .ProductDetailPage {
-        padding: 1.5rem 0.5rem;
+        padding: 1.5rem 1rem;
     }
     .ProductDetailPage-mainContent {
         gap: 2rem;
