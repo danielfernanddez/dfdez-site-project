@@ -120,12 +120,19 @@
   color: #333;
 }
 
-.Header-dfdez-mobile {
+.Header-dfdez-mobile-top {
   position: absolute;
-  width: 90%;
-  top: 1rem ;
-  left: -10rem;
-  rotate: 25deg;
+  width: 75%;
+  top: -3rem ;
+  left: -7.5rem;
+  rotate: 42deg;
+}
+
+.Header-dfdez-mobile-bot {
+  position: absolute;
+  width: 75%;
+  bottom: -10rem ;
+  
 }
 
 @media (max-width: 768px) {
@@ -138,6 +145,22 @@
   .Header.Header-scrolled .Header-desktopLinks {
     opacity: 0;
     pointer-events: none;
+  }
+}
+
+@media (max-width: 376px) {
+  .Header-dfdez-mobile-top {
+    position: absolute;
+    width: 70%;
+    top: -3rem ;
+    left: -8rem;
+    rotate: 42deg;
+  }
+
+  .Header-dfdez-mobile-bot {
+    position: absolute;
+    width: 70%;
+    bottom: -11rem ;
   }
 }
 
