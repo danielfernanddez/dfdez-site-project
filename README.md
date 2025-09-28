@@ -68,6 +68,7 @@ While it looks like a standard e-commerce store, the real features are in the an
     * `select_promotion`.
 * **SPA Page View Tracking**: A custom `spa_page_view` event for tracking virtual page views in this React SPA.
 * **User Scope Data**: The `user_id` and `user_status` ('logged_in' or 'Guest User') are sent with all relevant events.
+* **Consent Management Platform**: CookieYes CMP is integrated to handle user consent for cookies and tracking, fully compatible with Google Consent Mode v2.
 
 ---
 
