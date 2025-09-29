@@ -122,17 +122,17 @@
 
 .Header-dfdez-mobile-top {
   position: absolute;
-  width: 75%;
-  top: -3rem ;
-  left: -7.5rem;
+  width: 50%;
+  top: -1.5rem ;
+  left: -4rem;
   rotate: 42deg;
 }
 
 .Header-dfdez-mobile-bot {
   position: absolute;
-  width: 75%;
-  bottom: -12.5rem ;
-  right: -7rem;
+  width: 50%;
+  bottom: -7.5rem ;
+  right: .5rem;
   
 }
 
