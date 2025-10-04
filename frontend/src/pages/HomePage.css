@@ -118,9 +118,13 @@
 }
 
 .HomePage-productCard img {
+  display: block;
   width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 0.5rem;
+  
 }
 
 .HomePage-productCard h3 {
@@ -157,7 +161,10 @@
 }
 
 .HomePage-banner img {
+  display: block;
   width: 100%;
+  height: auto;
+  aspect-ratio: 2/1;
   border-radius: 10px;
   object-fit: cover;
 }

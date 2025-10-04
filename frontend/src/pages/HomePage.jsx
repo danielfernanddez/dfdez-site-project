@@ -146,7 +146,7 @@ const HomePage = () => {
                     <button>I'm an Analytics Nerd</button>
                 </div>
                 <div className="HomePage-heroImage">
-                    <img src="/images/heros/banner-hero-tools2.webp" alt="Hero Banner Tools" loading='lazy'/>
+                    <img src="/images/heros/banner-hero-tools2.webp" alt="Hero Banner Tools" fetchPriority="high"/>
                 </div>
             </section>
 

@@ -125,6 +125,7 @@
     opacity: 0.05;
     z-index: 1;
     user-select: none; /* Prevent text selection */
+    aspect-ratio: 16/3;
 }
 
 /* --- Responsive Adjustments --- */

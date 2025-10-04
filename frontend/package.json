@@ -14,6 +14,7 @@
     "crypto-js": "^4.2.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-lite-youtube-embed": "^2.5.6",
     "react-router-dom": "^7.9.1"
   },
   "devDependencies": {
